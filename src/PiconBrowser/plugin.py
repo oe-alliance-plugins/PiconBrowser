@@ -87,7 +87,7 @@ class PiconBrowserSetup(Setup):
 		self.session.open(PiconBrowserPreview)
 
 	def startManualSync(self):
-		if not PiconBrowser.instance.download():
+		if not PiconBrowser.getInstance(self.session).download():
 			self.session.showError(_("A picon sync is already running."))
 		else:
 			self.session.showInfo(_("Picon sync started in the background."))
@@ -323,12 +323,19 @@ class PiconSync:
 class PiconBrowser:
 	instance = None
 
+	@classmethod
+	def getInstance(cls, session):
+		# SESSIONSTART is not repeated when the plugin is installed in a running GUI.
+		if cls.instance is None:
+			cls(session)
+		return cls.instance
+
 	def __init__(self, session):
-		PiconBrowser.instance = self
 		self.session = session
 		self._runningSync = None
 		from Scheduler import addFunctionTimer
 		addFunctionTimer(SCHEDULER_TIMER_KEY, _("Picon Browser Sync"), self._schedulerRun, self._schedulerCancel, useOwnThread=True)
+		PiconBrowser.instance = self
 
 	def stop(self):
 		self._schedulerCancel()
@@ -393,17 +400,14 @@ class PiconBrowser:
 
 def autostart(reason, session=None, **kwargs):
 	if reason == 0 and session is not None:
-		PiconBrowser(session)
+		PiconBrowser.getInstance(session)
 	elif reason == 1:
 		if PiconBrowser.instance:
 			PiconBrowser.instance.shutdown()
 
 
 def main(session, **kwargs):
-	if PiconBrowser.instance:
-		PiconBrowser.instance.openSetup()
-	else:
-		session.open(PiconBrowserSetup)
+	PiconBrowser.getInstance(session).openSetup()
 
 
 def Plugins(**kwargs):
