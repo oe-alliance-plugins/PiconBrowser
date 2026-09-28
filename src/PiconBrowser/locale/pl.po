@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PiconBrowser package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PiconBrowser\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-08 21:54+0200\n"
+"PO-Revision-Date: 2026-09-11 07:38+0100\n"
+"Last-Translator: StreamF\n"
+"Language-Team: Polish\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: ../plugin.py:91
+msgid "A picon sync is already running."
+msgstr "Synchronizacja pikon jest już uruchomiona."
+
+#: ../plugin.py:152 ../plugin.py:153
+msgid "Close the preview"
+msgstr "Zamknij podgląd"
+
+#: ../setup.xml
+msgid "Exclude IPTV"
+msgstr "Wyklucz IPTV"
+
+#: ../setup.xml
+msgid "Exclude IPTV services from the channel list used to determine which picons are needed."
+msgstr "Wyklucz usługi IPTV z listy kanałów używanej do ustalenia, które pikony są potrzebne."
+
+#: ../setup.xml
+msgid "Exclude Radio"
+msgstr "Wyklucz Radio"
+
+#: ../setup.xml
+msgid "Exclude radio services from the channel list used to determine which picons are needed."
+msgstr "Wyklucz usługi radiowe z listy kanałów używanej do ustalenia, które pikony są potrzebne."
+
+#: ../setup.xml
+msgid "Local directory the picons are downloaded to (Single-path mode)."
+msgstr "Katalog lokalny, do którego pobierane są pikony (Tryb jednej ścieżki)."
+
+#: ../setup.xml
+msgid "Picon Browser Settings"
+msgstr "Ustawienia"
+
+#: ../plugin.py:331
+msgid "Picon Browser Sync"
+msgstr "Synchronizacja Picon Browser"
+
+#: ../setup.xml
+msgid "Picon path"
+msgstr "Ścieżka pikon"
+
+#: ../setup.xml
+msgid "Picon repo for path %s"
+msgstr "Repozytorium pikon dla ścieżki %s"
+
+#: ../plugin.py:93
+msgid "Picon sync started in the background."
+msgstr "Synchronizacja pikon uruchomiona w tle."
+
+#: ../plugin.py:413
+msgid "PiconBrowser description"
+msgstr "Opis PiconBrowser"
+
+#: ../setup.xml
+msgid "Scheduled sync"
+msgstr "Zaplanowana synchronizacja"
+
+#: ../plugin.py:110
+msgid "Select Picon Directory"
+msgstr "Wybierz katalog pikon"
+
+#: ../setup.xml
+msgid "Select the picon repo to download into Picon path %s (see Picon Settings)."
+msgstr "Wybierz repozytorium pikon do pobrania do ścieżki pikon %s (patrz Ustawienia pikon)."
+
+#: ../plugin.py:76
+msgid "Show a preview image for each picon repo"
+msgstr "Pokaż podgląd obrazu dla każdego repozytorium pikon"
+
+#: ../plugin.py:151
+msgid "Show the next repo's preview"
+msgstr "Pokaż podgląd następnego repozytorium"
+
+#: ../plugin.py:150
+msgid "Show the previous repo's preview"
+msgstr "Pokaż podgląd poprzedniego repozytorium"
+
+#: ../plugin.py:79
+msgid "Start a manual picon sync now"
+msgstr "Rozpocznij ręczną synchronizację pikon"
+
+#: ../plugin.py:74
+msgid "Sync now"
+msgstr "Synchronizuj teraz"
+
+#: ../setup.xml
+msgid "This plugin does not sync automatically. Add a 'Picon Browser Sync' task in the Scheduler plugin to run the sync periodically."
+msgstr "Ta wtyczka nie synchronizuje się automatycznie. Dodaj zadanie 'Synchronizacja Picon Browser' w Menu/Timery/Harmonogram, aby uruchamiać synchronizację okresowo."
+
+#: ../plugin.py:111
+msgid "What do you want to set as the picon location?"
+msgstr "Co chcesz ustawić jako lokalizację pikon?"
